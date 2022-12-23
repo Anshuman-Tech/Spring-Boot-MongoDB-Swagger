@@ -10,33 +10,41 @@ public class Job {
 
 
     //Model package stores POJO (Plain Old Java object)
+    private String id;
     private String name;
-    private String des;
+    private String desc;
     private String exp;
     private String[] skills;
 
+    public String getId(){
+        return id;
+    }
     public String getName(){
         return name;
     }
 
-    public String getDes(){
-        return des;
+    public String getDesc(){
+        return desc;
     }
 
-    public String getYearsOfExp(){
+    public String getExp(){
         return exp;
     }
     public String[] getSkills(){
         return skills;
     }
 
+    public void setId(String id){
+        this.id = id;
+    }
+
     public void setName(String name){
         this.name = name;
     }
-    public void setDescription(String des){
-        this.des = des;
+    public void setDesc(String desc){
+        this.desc = desc;
     }
-    public void setYearsOfExperience(String exp){
+    public void setExp(String exp){
         this.exp = exp;
     }
     public void setSkills(String[] skills){
@@ -46,9 +54,10 @@ public class Job {
     @Override
     public String toString() {
         return "Job{" +
-                "name='" + name + '\'' +
-                ", description='" + des + '\'' +
-                ", yearsOfExperience='" + exp + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", desc='" + desc + '\'' +
+                ", exp='" + exp + '\'' +
                 ", skills=" + Arrays.toString(skills) +
                 '}';
     }

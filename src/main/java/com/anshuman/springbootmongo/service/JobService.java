@@ -16,4 +16,14 @@ public class JobService {
     public List<Job> getAllJobs(){
         return jobRepository.findAll();
     }
+
+
+    public Job postJob(Job job){
+        return jobRepository.save(job);
+    }
+
+    public String deleteJob(String id){
+        jobRepository.deleteById(id);
+        return "Deleted successfully";
+    }
 }

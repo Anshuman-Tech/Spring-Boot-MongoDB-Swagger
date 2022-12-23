@@ -35,4 +35,7 @@ public class SpringbootmongoApplication {
 		final ApiInfoBuilder builder = new ApiInfoBuilder();
 		return builder.build();
 	}
+
+
+
 }
